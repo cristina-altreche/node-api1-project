@@ -108,7 +108,9 @@ server.put("/api/users/:id", (req, res) => {
       .status(400)
       .json({ errorMessage: "Please provide name and bio for the user." });
   } else if (found && changes.name && changes.bio) {
-    //The Object.assign() method copies all enumerable own properties from one or more source objects to a target object. It returns the target object.
+    //The Object.assign(target, source) method copies all enumerable own properties from one or more source objects to a target object. It returns the target object.
+    // The target object — what to apply the sources’ properties to, which is returned after it is modified.
+    // The source object(s) — objects containing the properties you want to apply.
     Object.assign(found, changes);
     res.status(200).json(found);
   } else {
