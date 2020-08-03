@@ -53,6 +53,7 @@ server.post("/api/users", (req, res) => {
   }
 });
 
+//GET API/USERS/:ID
 server.get("/api/users/:id", (req, res) => {
   const id = req.params.id;
 
